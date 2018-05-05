@@ -17,8 +17,46 @@
  *  ]
  */
 function createCompassPoints() {
-    throw new Error('Not implemented');
-    var sides = ['N','E','S','W'];  // use array of cardinal directions only!
+    const arr = ['N',
+        'NbE',
+        'NNE',
+        'NEbN',
+        'NE',
+        'NEbE',
+        'ENE',
+        'EbN',
+        'E',
+        'EbS',
+        'ESE',
+        'SEbE',
+        'SE',
+        'SEbS',
+        'SSE',
+        'SbE',
+        'S',
+        'SbW',
+        'SSW',
+        'SWbS',
+        'SW',
+        'SWbW',
+        'WSW',
+        'WbS',
+        'W',
+        'WbN',
+        'WNW',
+        'NWbW',
+        'NW',
+        'NWbN',
+        'NNW',
+        'NbW'];
+    let arr2=[];
+    for (let i=0; i<arr.length; i++) {
+        let obj={};
+        obj.abbreviation = arr[i];
+        obj.azimuth = 11.25*i;
+        arr2.push(obj);
+    }
+    return arr2;
 }
 
 
